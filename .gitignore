@@ -1,0 +1,184 @@
+# ================
+# 编译器输出文件
+# ================
+# 常见的可执行文件和对象文件
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.o
+*.obj
+*.lo
+*.la
+*.gch
+*.pch
+*.idb
+*.ipdb
+*.pdb
+*.exp
+*.manifest
+*.res
+
+# ================
+# 构建目录 (最常见)
+# ================
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+# 如果你使用 Ninja 或其他生成器，构建目录可能叫 build/, out/, etc.
+build/
+bld/
+out/
+dist/
+# 自定义构建目录
+*_build/
+*_bld/
+*_out/
+
+# Make
+Makefile
+makefile
+GNUmakefile
+# Make 生成的依赖文件
+*.d
+*.dep
+
+# ================
+# IDE 和编辑器
+# ================
+# Visual Studio (Windows)
+.vs/
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Visual Studio Code
+.vscode/
+# 注意：如果你的团队共享调试/任务配置，可以取消注释下面两行
+# !.vscode/tasks.json
+# !.vscode/launch.json
+
+# Xcode (macOS)
+*.xcodeproj
+*.xcworkspace
+*.xcuserstate
+xcuserdata/
+
+# CLion / JetBrains IDEs
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Vim
+*.swp
+*.swo
+*.swn
+*.un~
+session.vim
+.netrwhist
+*~
+
+# ================
+# 操作系统文件
+# ================
+# Windows
+Thumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.DS_Store
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.FBCIndex
+.FBCLockFolder
+
+# Linux
+*~
+
+# ================
+# 日志和临时文件
+# ================
+*.log
+*.tmp
+*.bak
+*.cache
+*.diff
+*.err
+*.ilk
+*.map
+*.ncb
+*.sbr
+*.tlog
+*.wrn
+
+# ================
+# 包管理器
+# ================
+# vcpkg
+vcpkg_installed/
+vcpkg.json
+vcpkg-configuration.json
+# 注意：vcpkg.json 通常应该提交，但构建输出 vcpkg_installed/ 必须忽略
+
+# Conan
+.conan/
+conanfile.txt
+conaninfo.txt
+conanbuildinfo.cmake
+
+# Hunter (CMake)
+Hunter/
+
+# ================
+# 其他
+# ================
+# 单元测试输出
+Test.xml
+test_detail.xml
+
+# 覆盖率报告
+coverage/
+*.info
+*.gcov
+*.lcov
+*.html
+
+# 文档生成 (Doxygen, Sphinx)
+docs/_build/
+docs/api/
+
+# 配置文件 (本地开发用)
+config.local.h
+secrets.h
+*.local
+.env
