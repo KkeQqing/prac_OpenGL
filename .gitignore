@@ -1,0 +1,49 @@
+# 编译输出目录
+build/
+cmake-build-*/
+out/
+bin/
+lib/
+
+# 可执行文件和库（根据你的项目结构调整）
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.o
+*.obj
+*.pdb
+*.ilk
+
+# CMake 生成文件
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+_Deps/
+
+# IDE 相关
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# 日志和临时文件
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# 其他常见忽略项
+*.swp
+*~
