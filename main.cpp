@@ -21,6 +21,7 @@
 * experience OpenGL error handling mechanism
 * encapsulate a function to check for OpenGl errors
 * move the error checking code to another .cpp file
+* create a macro named GL_CALL(func) to conviniently invoke OpenGL functions with integrated error checking
 */
 
 // implement a framebuffer resize handler
@@ -70,8 +71,7 @@ int main(){
 		glfwPollEvents();
 
 		// clear the color buffer
-		glClear(GL_COLOR_BUFFER_BIT);
-		checkError();
+		 GL_CALL(glClear(GL_COLOR_BUFFER_BIT));
 		// render
 
 		// swap the front and back buffers
