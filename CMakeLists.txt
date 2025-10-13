@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)  # 明确要求支持 C++17
 
 #在项目中加入一个全局预编译宏,若不需要可注释掉
 add_compile_definitions(DEBUG)
+#为特定目标添加预编译宏
+#target_compile_definitions(TestGLFW PRIVATE DEBUGGER_WORKING_DIRECTORY)
 
 # 添加子目录
 add_subdirectory(wrapper)
