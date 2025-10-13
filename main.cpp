@@ -32,10 +32,10 @@ void framebufferSizeCallback(GLFWwindow* window, int width, int height) {
 // key:GLFW keycode, scancode:ŒÔ¿Ì∞¥º¸¬Î, action:press/release/repeat, mods:modifier keys(e.g. shift/ctrl/alt/super)
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
 	std::cout << "key: " << key << " scancode: " << scancode << " action: " << action << " mods: " << mods << std::endl;
-	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, true);// set the window to close
+	}
 }
-
 
 int main(){
 	//1 Initialize GLFW basic settings
@@ -53,7 +53,6 @@ int main(){
 	// set up a callback to handle keyboard input events
 	glfwSetKeyCallback(window, keyCallback);
 
-
 	//use GLAD to load all OpenGL functions for the current version
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)){
 		std::cout << "failed to initialize GLAD" << std::endl;
@@ -63,7 +62,6 @@ int main(){
 	// set the viewport°¢clear color
 	glViewport(0, 0, 800, 600);
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-
 	//3 run the form loop
 	while (!glfwWindowShouldClose(window)) {
 		// process window messages

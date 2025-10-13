@@ -1,21 +1,53 @@
-# 编译输出目录
-build/
-cmake-build-*/
-out/
-bin/
-lib/
-
-# 可执行文件和库（根据你的项目结构调整）
+# ================
+# 编译器输出文件
+# ================
+# 可执行文件和库
 *.exe
+*.out
+*.app
 *.dll
 *.so
 *.dylib
 *.a
 *.lib
+
+# 对象文件和中间文件
 *.o
 *.obj
+*.lo
+*.la
+*.gch
+*.pch
+*.idb
+*.ipdb
 *.pdb
 *.ilk
+*.exp
+*.manifest
+*.res
+*.sbr
+*.tlog
+*.wrn
+*.map
+*.ncb
+
+# 依赖文件（Make 等）
+*.d
+*.dep
+
+# ================
+# 构建目录
+# ================
+# 通用构建目录
+build/
+bld/
+out/
+dist/
+bin/
+lib/
+*_build/
+*_bld/
+*_out/
 
 # CMake 生成文件
 CMakeCache.txt
@@ -25,25 +57,130 @@ cmake_install.cmake
 install_manifest.txt
 CTestTestfile.cmake
 _Deps/
+compile_commands.json
 
-# IDE 相关
+# Makefile
+Makefile
+makefile
+GNUmakefile
+
+# ================
+# IDE 和编辑器
+# ================
+# Visual Studio
 .vs/
-.vscode/
-.idea/
+*.sln
 *.suo
 *.user
 *.userosscache
-*.sln
+*.sln.docstates
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
 
-# 日志和临时文件
+# Visual Studio Code
+.vscode/
+# 如果需要共享配置，可取消注释以下行：
+# !.vscode/tasks.json
+# !.vscode/launch.json
+
+# JetBrains (CLion, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Xcode
+*.xcodeproj
+*.xcworkspace
+*.xcuserstate
+xcuserdata/
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Vim
+*.swp
+*.swo
+*.swn
+*.un~
+session.vim
+.netrwhist
+
+# ================
+# 操作系统文件
+# ================
+# Windows
+Thumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.FBCIndex
+.FBCLockFolder
+
+# Linux
+*~
+
+# ================
+# 日志、临时、备份文件
+# ================
 *.log
 *.tmp
-.DS_Store
-Thumbs.db
+*.bak
+*.cache
+*.diff
+*.err
 
-# 其他常见忽略项
-*.swp
-*~
+# ================
+# 包管理器
+# ================
+# vcpkg
+vcpkg_installed/
+# vcpkg.json 应提交，故不忽略
+
+# Conan
+.conan/
+conanfile.txt
+conaninfo.txt
+conanbuildinfo.cmake
+
+# Hunter
+Hunter/
+
+# ================
+# 其他
+# ================
+# 测试与覆盖率
+Test.xml
+test_detail.xml
+coverage/
+*.info
+*.gcov
+*.lcov
+*.html
+
+# 文档
+docs/_build/
+docs/api/
+
+# 本地配置（不应提交）
+config.local.h
+secrets.h
+*.local
+.env
